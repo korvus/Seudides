@@ -1,0 +1,48 @@
+html{height:100%;}
+body{background:#fff;}
+body.ingame{cursor:none;}
+
+
+
+#light{
+	opacity:1;
+	position:absolute;width:20000px;height:20000px;z-index:10;
+	background:radial-gradient(ellipse at center, rgba(255,249,219,0) 0%,rgba(255,249,219,0) 10px,rgba(255,255,255,0.8) 20px,rgba(113,113,113,1) 60px,rgba(0,0,0,1) 100px);
+}
+.ingame #light{display:block;cursor:none;}
+
+.hsalf{animation:eclairage 2s ease;}
+
+@keyframes eclairage{
+  	0%{opacity:1;}
+   10%{opacity:0;}
+   20%{opacity:1;}
+   30%{opacity:0;}
+  100%{opacity:1;}
+}
+
+#board{position:relative;}
+
+.letter{position:absolute;font-weight:bold;color:#000;z-index:1;cursor:pointer;}
+.flash, .clickFlash{position:absolute;background:url(i/sprite.png) -145px 0;width:14px;height:25px;z-index:2;}
+.key, .clickKey{position:absolute;display:block;width:18px;height:23px;background:url(i/sprite.png) 0 0;z-index:5;}
+.lvl1 .key{width:18px;height:23px;background-position:-18px 0;}
+.lvl2 .key{width:18px;height:23px;background-position:-37px 0;}
+.clickFlash, 
+.clickKey{z-index:11;background:transparent;}
+
+.message #victory{position:absolute;top:0;z-index:20px;display:block;width:100%;}
+.message #victory div{width:400px;border:10px solid #fff;background:#000;margin:50px auto 0;padding:20px;color:#fff;font-size:30px;}
+.message #board{background:#000;}
+.message #light{display:none;}
+.message .letter{cursor:default;display:none;}
+.message .flash{display:none;}
+
+.message #victory div{color:#fff;}
+.message #victory .victory0{background:#bb2e2e url(i/flash.png) no-repeat 171px 143px;}
+#victory .victory0 span{margin:190px auto 0;}
+#victory span{display:block;width:200px;text-decoration:underline;cursor:pointer;transition:color 0.2s ease;}
+#victory span:hover{color:#000;}
+
+.message #victory .victory1{background:#f3a000;}
+.message #victory .victory2{background:#fbed3e;}

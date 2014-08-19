@@ -1,0 +1,24 @@
+{
+    "lvl0": {
+        "win": "<div class='victory0'>Congratulation! You get the red key! This unlock the lightning bonus !</div>"
+    },
+    "lvl1": {
+        "win": "<div class='victory1'>You found the orange key!<br /> Go find the other key now, but, be carreful, because, now, there is a stopwatch :)</div>"
+    },
+    "lvl2": {
+        "win": "<div class='victory2'>You found the orange key!<br /> Go find the other key now, but, be carreful, because, now, there is a stopwatch :)</div>"
+    },
+    "lvl3": {
+        "win": "Et là ?"
+    },
+    "lvl4": {
+        "win": "t'as cliqué %% fois dans le vide pour rien poto :("
+    },
+    "lvl5": {
+        "win": "En fait, j'ai adoré quand tu m'as cliqué dessus, donc vas-y, recliques moi dessus si tu veux, ça m'excite plutôt..."
+    },
+    "lvl6": {
+        "win": "Encore !"
+    }
+
+}

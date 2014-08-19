@@ -1,0 +1,20 @@
+body{background:#000;color:#fff;font-size:25px;font-weight:bold;}
+p{width:300px;margin:50px auto 50px auto;animation:apparition 2s ease none;}
+
+@keyframes apparition{
+  0%{color:#000;}
+  100%{color:#fff;}
+}
+
+.bt{display:none;text-transform:uppercase;border:1px solid #fff;color:#fff;width:150px;margin:0 auto;font-size:25px;padding:10px;text-align:center;text-decoration:none;}
+#warning{display:none;color:#fff;font-size:14px;width:300px;margin:0 auto;}
+
+#warning p{display:block;}
+#warning table{width:300px;margin:25px 0 0 0;font-size:12px;font-weight:normal;}
+td,th{border:1px solid #999;padding:5px;}
+#warning table th{text-align:left;font-weight:normal;}
+table .good{color:#92ff83;}
+table .bad{color:#ff8383;}
+
+.bad #warning{display:block;}
+.good .bt{display:block;}
