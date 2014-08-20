@@ -197,6 +197,7 @@ function initClickOnKey(){
 		skey.play();
 		clearTimeout(uncount);
 		$("body").removeClass("ingame").addClass("message");
+		$(".hoverSkull").unbind("mouseover");
 	})
 }
 
