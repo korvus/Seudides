@@ -394,7 +394,7 @@ function generateLvl3(){
 	randPos($(".key"));
 	randRotation($(".key"));
 
-	initCountDown(60);
+	initCountDown(30);
 	initClickOnFlash();
 	initClickOnWatch();
 	initClickOnKey();
@@ -424,7 +424,7 @@ function generateLvl4(){
 	  	randPos(tw);
 	}
 
-	for(var l0=0; l0<10; l0++){
+	for(var l0=0; l0<15; l0++){
 	  	$("#board").append("<div data-rel='"+l0+"' class='skull'></div>");
 	  	tw = $(".skull:eq("+l0+")");
 	  	randPos(tw);
@@ -434,7 +434,7 @@ function generateLvl4(){
 	randPos($(".key"));
 	randRotation($(".key"));
 
-	initCountDown(120);
+	initCountDown(60);
 	initClickOnFlash();
 	initClickOnWatch();
 	initClickOnKey();

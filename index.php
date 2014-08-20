@@ -22,6 +22,10 @@
 		Better if you're not daltonian for playing this game!<br />
 	</p>
 
+	<p class="small">
+		For playing in optimum conditions, play on <strong>firefox</strong>.
+	</p>
+
 	<div id="warning">
 		<p>for playing Seudides, your windows need to be at least 1000px width and 800px height. If your screen is under that, you will not be abble to save the world :(</p>
 		<table>

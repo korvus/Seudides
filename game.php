@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <title>Seudides</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" id="favicon">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" id="favicon">
 
   <link rel="stylesheet" href="r/css/g.css">
   <link rel="stylesheet" href="r/css/game.css">
