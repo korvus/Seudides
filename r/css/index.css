@@ -17,5 +17,10 @@ td,th{border:1px solid #999;padding:5px;}
 table .good{color:#92ff83;}
 table .bad{color:#ff8383;}
 
+.musiq{font-size:12px;font-weight:normal;display:block;width:120px;margin:20px auto;text-decoration:underline;cursor:pointer;}
+.musiq .icon{float:left;background:url(i/sprite.png) -187px 0 no-repeat;width:26px;height:20px;display:block;z-index:12;margin-right:10px;}
+.musiq.off .icon{background-position:-213px 0;}
+
+
 .bad #warning{display:block;}
 .good .bt{display:block;}

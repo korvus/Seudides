@@ -60,7 +60,8 @@ function loopMusic(mobj){
 }
 
 function initLastMusic(){
-	song1.stop();
+	song1.pause();
+	song1.currentTime = 0;
 	var ifMusic = localStorage.getItem("musicSeudides");
 	if(ifMusic==1){
 		defaultSong = song2;
@@ -222,7 +223,8 @@ function initSkullHover(){
 }
 
 function endGame(why){
-	defaultSong.animate({volume: 0}, 1000);
+	defaultSong.pause();
+	defaultSong.currentTime = 0;
 	sessionStorage.setItem("seudides","0");
 	$("body").removeClass().addClass("message").addClass("defeat");
 	content = $("#"+why).html();

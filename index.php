@@ -50,8 +50,8 @@
 	<a href="game.php" class="bt">
 		start.
 	</a>
-	<span class="bt musiq">
-		With music?
+	<span class="musiq">
+		<span class="icon"></span>With music?
 	</span>
 
 </body>
