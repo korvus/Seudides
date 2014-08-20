@@ -19,7 +19,7 @@
 		The wizard Darshado stools colors.<br />
 		You the light.<br />
 		You have to find the keys, for getting the outcome...<br />
-		And for found again colors, need by everybody...<br />
+		Better if you're not daltonian for playing this game!<br />
 	</p>
 
 	<div id="warning">
@@ -50,6 +50,9 @@
 	<a href="game.php" class="bt">
 		start.
 	</a>
+	<span class="bt musiq">
+		With music?
+	</span>
 
 </body>
 </html>

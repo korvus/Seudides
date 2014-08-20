@@ -274,8 +274,8 @@ function generateLvl0(){
 	
 	initClickOnKey();
 
-	song1.volume = 50;
-	song2.volume = 50;
+	song1.volume = 0.5;
+	song2.volume = 0.5;
 
 }
 
