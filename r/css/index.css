@@ -6,6 +6,7 @@ p{width:300px;margin:50px auto 50px auto;animation:apparition 2s ease none;}
   100%{color:#fff;}
 }
 
+h1{font-size:25px;width:300px;margin:0 auto;text-shadow:0 0 10px #fff;text-align:center;}
 .bt{display:none;text-transform:uppercase;border:1px solid #fff;color:#fff;width:150px;margin:0 auto;font-size:25px;padding:10px;text-align:center;text-decoration:none;}
 #warning{display:none;color:#fff;font-size:14px;width:300px;margin:0 auto;}
 

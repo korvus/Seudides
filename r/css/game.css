@@ -3,7 +3,6 @@ body{background:#fff;}
 body.ingame{cursor:none;}
 
 
-
 #light{
 	opacity:0.5;
 	position:absolute;width:20000px;height:20000px;z-index:10;
@@ -25,26 +24,89 @@ body.ingame{cursor:none;}
 
 .letter{position:absolute;font-weight:bold;color:#000;z-index:1;cursor:pointer;}
 .flash, .clickFlash{position:absolute;background:url(i/sprite.png) -145px 0;width:14px;height:25px;z-index:2;}
-.key, .clickKey{position:absolute;display:block;width:18px;height:23px;background:url(i/sprite.png) 0 0;z-index:5;}
+.timewatch, .clickTimewatch{position:absolute;background:url(i/sprite.png) -160px 0;width:26px;height:25px;z-index:2;}
+.skull, .hoverSkull{position:absolute;display:block;width:18px;height:23px;background:url(i/sprite.png) -124px 0;z-index:4;}
+#music{background:url(i/sprite.png) -187px 0 no-repeat;width:26px;height:20px;display:block;right:10px;top:10px;position:absolute;z-index:12;}
+#music.off{background-position:-213px 0;}
+.key, .clickKey{position:absolute;display:block;width:19px;height:23px;background:url(i/sprite.png) 0 0;z-index:5;}
 .lvl1 .key{width:18px;height:23px;background-position:-18px 0;}
 .lvl2 .key{width:18px;height:23px;background-position:-37px 0;}
+.lvl3 .key{width:18px;height:23px;background-position:-56px 0;}
+.lvl4 .key{width:18px;height:23px;background-position:-75px 0;}
+.lvl5 .key{width:18px;height:23px;background-position:-94px 0;}
+.clickTimewatch,
 .clickFlash, 
-.clickKey{z-index:11;background:transparent;}
+.clickKey,
+.hoverSkull{z-index:11;background:transparent;}
 
-#countdown{position:absolute;top:0;left:0;color:#fff;font-size:30px;height:30px;width:100%;line-height:30px;z-index:15;padding-left:15px;}
+#countdown{position:absolute;top:0;left:0;color:#fff;font-size:30px;height:30px;width:100%;line-height:50px;z-index:11;padding-left:15px;}
+
+.gainTime{display:none;position:absolute;z-index:30;width:100%;text-align:center;top:30px;}
+.gainTime.toDisp{animation:showGain 1s linear;display:block;font-size:70px;color:#fff;font-weight:bold;}
+
+@keyframes showGain{
+  	0%{font-size:25px;color:#000;}
+   100%{font-size:70px;color:#fff;}
+}
 
 .message #victory{position:absolute;top:0;z-index:20px;display:block;width:100%;}
 .message #victory div{width:400px;border:10px solid #fff;background:#000;margin:50px auto 0;padding:20px;color:#fff;font-size:30px;}
 .message #board{background:#000;}
-.message #light{display:none;}
-.message .letter{cursor:default;display:none;}
-.message .flash{display:none;}
+.message .letter,
+.message #light,
+.message .flash,
+.message .timewatch,
+.message .skull{display:none;cursor:default;}
+.message #countdown{display:none;}
 
 .message #victory div{color:#fff;}
 .message #victory .victory0{background:#bb2e2e url(i/flash.png) no-repeat 171px 143px;}
 #victory .victory0 span{margin:190px auto 0;}
-#victory span{display:block;width:200px;text-decoration:underline;cursor:pointer;transition:color 0.2s ease;}
+#victory span{display:block;width:400px;text-decoration:underline;cursor:pointer;transition:color 0.2s ease;text-align:center;margin:10px 0;}
 #victory span:hover{color:#000;}
 
 .message #victory .victory1{background:#f3a000;}
-.message #victory .victory2{background:#fbed3e;}
+.message #victory .victory2{background:#fbed3e url(i/watch.png) 100px 130px no-repeat;color:#000;}
+.message #victory .victory2 span{margin:230px auto 0;}
+.message #victory .victory3{background:#51ad28 url(i/skull.png) 133px 288px no-repeat;}
+.message #victory .victory3 span{margin:230px auto 0;}
+.message #victory .victory4{background:#3052c1;}
+
+.defeat #victory{display:none;}
+
+#defeat{position:absolute;top:0;z-index:20;display:none;width:100%;}
+#defeat .timeout{width:400px;border:10px solid #000;background:#000 url(i/darshado.png) no-repeat 106px 113px;margin:50px auto 0;padding:20px 20px 0;color:#fff;font-size:30px;box-shadow:0 0 10px #000;}
+#defeat div span{display:block;width:350px;border:5px solid #fff;margin:240px auto 0;text-align:center;padding:10px;cursor:pointer;}
+#defeat div span:hover{border-color:#000;}
+.animation{animation:wizard 5s linear;}
+#defeat .skullend{width:400px;border:10px solid #000;background:#000 url(i/skull.png) no-repeat 133px 114px;margin:50px auto 0;padding:20px 20px 0;color:#fff;font-size:30px;box-shadow:0 0 10px #000;}
+
+@keyframes wizard{
+  	0%{background-color:#fff;color:#000;}
+   50%{background-color:#fff;color:#000;}
+   100%{background-color:#000;color:#fff;}
+}
+
+#end{width:100%;height:100%;overflow:hidden;}
+#end div{width:400px;margin:100px auto;}
+#end .wiz{width:200px;height:300px;left:25%;bottom:-300px;position:absolute;background:transparent url(i/darshado.png) no-repeat 0 0;}
+#end a{color:#7d15a4;}
+#end p{margin:0;}
+h1{font-size:60px;text-shadow:0 0 3px #888;margin:50px 0;text-align:center;}
+h2{margin:50px 0 0 0;}
+.r{color:#bb2e2e;}
+.o{color:#f3a000;}
+.y{color:#fbed3e;}
+.g{color:#51ad28;}
+.b{color:#3052c1;}
+.p{color:#7d15a4;}
+.win{
+background: rgb(255,255,255);
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 60%, rgba(125,21,164,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,rgba(255,255,255,1)), color-stop(100%,rgba(125,21,164,1)));
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 60%,rgba(125,21,164,1) 100%);
+background: -o-linear-gradient(top,  rgba(255,255,255,1) 60%,rgba(125,21,164,1) 100%);
+background: -ms-linear-gradient(top,  rgba(255,255,255,1) 60%,rgba(125,21,164,1) 100%);
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 60%,rgba(125,21,164,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#7d15a4',GradientType=0 );
+}

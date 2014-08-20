@@ -6,19 +6,16 @@
         "win": "<div class='victory1'>You found the orange key!<br /> Go find the other key now, but, be carreful, because, now, there is a stopwatch :)</div>"
     },
     "lvl2": {
-        "win": "<div class='victory2'>You found the orange key!<br /> Go find the other key now, but, be carreful, because, now, there is a stopwatch :)</div>"
+        "win": "<div class='victory2'>You found the yellow key!<br /> you will have the abilities, now, to get some bonus time!</div>"
     },
     "lvl3": {
-        "win": "Et là ?"
+        "win": "<div class='victory3'>You progress fastly, that is good. But Darshado is really upset now. You'll have to be very carrefully, because he dropped behind him some skulls for killing you. Just don't hover it...</div>"
     },
     "lvl4": {
-        "win": "t'as cliqué %% fois dans le vide pour rien poto :("
+        "win": "<div class='victory4'>Congratulation... ! It seem you miss just one key. But Darshado is really crazy about you now... He managed by a magic trick to remove the flashlist items from the map... It's nearly to be impossible now... Good luck...</div>"
     },
     "lvl5": {
-        "win": "En fait, j'ai adoré quand tu m'as cliqué dessus, donc vas-y, recliques moi dessus si tu veux, ça m'excite plutôt..."
-    },
-    "lvl6": {
-        "win": "Encore !"
+        "win": "Wow, that was possible! You win!!!"
     }
 
 }
