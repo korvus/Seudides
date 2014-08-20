@@ -16,7 +16,9 @@
 
 	<div id="light"></div>
 	<div id="board"></div>
-	<div id="victory"></div>
+  <div id="countdown"></div>
+  <div id="victory"></div>
+  <div id="defeat"></div>
 
 
 </body>

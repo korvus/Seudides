@@ -6,6 +6,7 @@ var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p",
 var charachs = alphabet.length;
 var lvls = {};
 var victory = "";
+var ocarinaOfTime = 10;
 
 $(document).ready(function(){
 
@@ -148,26 +149,32 @@ function generateLvl0(){
 
 }
 
-
-/////////////////////////////////////Second level
-function addRed(domNode){
-	ifRed = randomise(0,6);
-	if(ifRed===1){
-		domNode.css({'color':'#bb2e2e'});
+function addColor(domNode,howmuch){
+	randColor = randomise(0,5);
+	console.log(randColor);
+	for(var c=0;c<howmuch;c++){
+		if(randColor===c && c===0){domNode.css({'color':'#bb2e2e'});}
+		if(randColor===c && c===1){domNode.css({'color':'#f3a000'});}
+		if(randColor===c && c===2){domNode.css({'color':'#fbed3e'});}
+		if(randColor===c && c===3){domNode.css({'color':'#bb2e2e'});}
+		if(randColor===c && c===4){domNode.css({'color':'#bb2e2e'});}
+		if(randColor===c && c===5){domNode.css({'color':'#bb2e2e'});}
 	}
 }
+
+/////////////////////////////////////Second level
 
 
 function generateLvl1(){
 
-	for(i1=0; i1<100; i1++){
+	for(var i1=0; i1<100; i1++){
 		charach = randomise(0,charachs-1);
 	  	$("#board").append("<div class='letter'>"+alphabet[charach]+"</div>");
 	  	letter = $(".letter:eq("+i1+")");
 	  	randPos(letter);
 	  	randLetter(letter);
 	  	randRotation($(letter));
-	  	addRed(letter);
+	  	addColor(letter,1);
 	}
 
 	for(j0=0; j0<10; j0++){
@@ -186,17 +193,15 @@ function generateLvl1(){
 }
 
 /////////////////////////////////////third level
-function initClock(){
-	
+function initCountDown(){
+	countDown();
 }
 
-function addOrange(domNode){
-	ifRed = randomise(0,6);
-	if(ifRed===1){
-		domNode.css({'color':'#f3a000'});
-	}
+function countDown(){
+	ocarinaOfTime = ocarinaOfTime-1;
+	$("#countdown").html(ocarinaOfTime);
+	compte=setTimeout('countDown()',1000);
 }
-
 
 function generateLvl2(){
 
@@ -207,8 +212,7 @@ function generateLvl2(){
 	  	randPos(letter);
 	  	randLetter(letter);
 	  	randRotation($(letter));
-	  	addRed(letter);
-	  	addOrange(letter);
+	  	addColor(letter,2);
 	}
 
 	for(j1=0; j1<10; j1++){
@@ -221,8 +225,7 @@ function generateLvl2(){
 	randPos($(".key"));
 	randRotation($(".key"));
 
-	initClock();
-	
+	initCountDown();
 	initClickOnFlash();
 	initClickOnKey();
 
