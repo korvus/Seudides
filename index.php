@@ -50,8 +50,12 @@
 	<a href="game.php" class="bt">
 		start.
 	</a>
-	<span class="musiq">
-		<span class="icon"></span>With music?
+
+	<p>In the game there will be music. But you can already...</p>
+	<span class="musiq on">
+		<span class="icon"></span>
+		<span class="on">Click here for remove music</span>
+		<span class="off">Click here for put music</span>
 	</span>
 
 </body>

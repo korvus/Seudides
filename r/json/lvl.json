@@ -12,7 +12,7 @@
         "win": "<div class='victory3'>You progress fastly, that is good. But Darshado is really upset now. You'll have to be very carrefully, because he dropped behind him some skulls for killing you. Just don't hover it...</div>"
     },
     "lvl4": {
-        "win": "<div class='victory4'>Congratulation... ! It seem you miss just one key. But Darshado is really crazy about you now... He managed by a magic trick to remove the flashlist items from the map... It's nearly to be impossible now... Good luck...</div>"
+        "win": "<div class='victory4'>Congratulation... ! It seem you miss just one key. But Darshado is really mad to you now... He managed by a magic trick to remove the flashlights items from the map... It's nearly to be impossible now... Good luck...</div>"
     },
     "lvl5": {
         "win": "Wow, that was possible! You win!!!"

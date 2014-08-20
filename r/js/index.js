@@ -15,6 +15,34 @@ function colors(){
 	}
 }
 
+function initMusiqStorage(){
+	if('musicSeudides' in localStorage){
+		var ifMusic = localStorage.getItem("musicSeudides");
+		if(ifMusic==1){
+			$(".musiq").removeClass("off").addClass("on");
+		}else{
+			$(".musiq").removeClass("on").addClass("off");
+		}
+	}else{
+		localStorage.setItem('musicSeudides',1);
+	}
+}
+
+function initClickMusiq(){
+	$(".musiq.on").unbind("click").click(function(e){
+		e.preventDefault();
+		$(this).removeClass("on").addClass("off").html("<span class='icon'></span>Click for put music");
+		localStorage.setItem('musicSeudides',0);
+		initClickMusiq();
+	})
+	$(".musiq.off").unbind("click").click(function(e){
+		e.preventDefault();
+		$(this).removeClass("off").addClass("on").html("<span class='icon'></span>Click here for remove music");
+		localStorage.setItem('musicSeudides',1);
+		initClickMusiq();
+	})
+}
+
 $(document).ready(function(){
 
 	wboard = $(window).width();
@@ -35,5 +63,8 @@ $(document).ready(function(){
 			$("body").addClass("bad").removeClass("good");
 		}
 	});
+
+	initMusiqStorage();
+	initClickMusiq();
 
 });

@@ -75,15 +75,15 @@ function playmusicornot(){
 		var ifMusic = localStorage.getItem("musicSeudides");
 		if(ifMusic==1){
 			$("#music").removeClass("off").addClass("on");
-			loopMusic(song1);
-			song1.play();
+			loopMusic(defaultSong);
+			defaultSong.play();
 		}else{
 			$("#music").removeClass("on").addClass("off");
 		}
 	}else{
 		localStorage.setItem('musicSeudides',1);
-		loopMusic(song1);
-		song1.play();
+		loopMusic(defaultSong);
+		defaultSong.play();
 	}
 }
 
@@ -230,6 +230,7 @@ function endGame(why){
 	content = $("#"+why).html();
 	$("#defeat").html(content).show().children("div").addClass("animation");
 	$("#board").html('');
+	clearTimeout(uncount);
 	$("#countdown").html('');
 	restartGame();
 }
@@ -239,6 +240,8 @@ function restartGame(){
 		$("#defeat div").removeClass("animation").parent().hide();
 		$("body").removeClass().addClass("ingame");
 		light.offset({top:e.pageY-widthLight,left:e.pageX-heightLight});
+		defaultSong = song1;
+		playmusicornot();
 		checkSession();
 	})
 }
@@ -275,6 +278,7 @@ function generateLvl0(){
 	randRotation($(".key"));
 	
 	initClickOnKey();
+	//Initialise le compteur si user vient du dernier niveau
 
 	song1.volume = 0.5;
 	song2.volume = 0.5;
@@ -441,7 +445,7 @@ function generateLvl5(){
 	  	randPos(tw);
 	}
 
-	for(var l1=0; l1<10; l1++){
+	for(var l1=0; l1<30; l1++){
 	  	$("#board").append("<div data-rel='"+l1+"' class='skull'></div>");
 	  	tw = $(".skull:eq("+l1+")");
 	  	randPos(tw);
