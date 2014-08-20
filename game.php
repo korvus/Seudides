@@ -54,6 +54,7 @@
       <h2>Credits</h2>
       <p class="credits">
         Lot of thanks to <a href="http://freemusicarchive.org/music/Azureflux/">Azureflux</a> for his awesome songs /Wizard House/ and /Reckless/ used in this game!<br /><br />
+        Sounds made on <a href="http://jfxr.frozenfractal.com/">jfxr</a>.<br /><br />
         Seudides has been made in a <a title="Selfish Game challenge" href="http://lisezmoi.org/selfishgame/">Selfish Game Challenge</a> mod, so it took approximatively 48 hours to made. Participate!<br /><br />
         The selfish game is here for share, so <a title="deal with it!" href="https://github.com/korvus/Seudides">here is the github</a> source of Seudides<br /><br />
         To mail me?:<a href="mailto:ertel.simon@gmail.com">ertel.simon@gmail.com</a>

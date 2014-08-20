@@ -10,7 +10,18 @@ var ocarinaOfTime = 180;
 var uncount = "";
 var song1 = new Audio("r/music/Reckless.mp3");
 var song2 = new Audio("r/music/Wizard_House.mp3");
+var swatch = new Audio("r/music/watch.wav");
+var sskull = new Audio("r/music/skull.wav");
+var skey = new Audio("r/music/key.wav");
+var sflash = new Audio("r/music/flash.wav");
 var defaultSong = song1;
+
+song1.volume = 0.5;
+song2.volume = 0.5;
+swatch.volume = 0.8;
+sskull.volume = 0.8;
+skey.volume = 0.8;
+sflash.volume = 1;
 
 $(document).ready(function(){
 
@@ -165,11 +176,13 @@ function checkSession(){
 }
 
 function onFlash(){
+	sflash.play();
 	$("#light").addClass("hsalf");
 	setTimeout(function(){$("#light").removeClass("hsalf");}, 2000);
 }
 
 function gainTime(){
+	swatch.play();
 	clearTimeout(uncount);
 	$(".gainTime").addClass("toDisp");
 	setTimeout(function(){$(".gainTime").removeClass("toDisp");}, 2000);
@@ -181,6 +194,7 @@ function gainTime(){
 function initClickOnKey(){
 	$(".key").clone().appendTo("#board").removeClass("key").addClass("clickKey");
 	$(".clickKey").click(function(){
+		skey.play();
 		clearTimeout(uncount);
 		$("body").removeClass("ingame").addClass("message");
 	})
@@ -189,6 +203,7 @@ function initClickOnKey(){
 function initClickFinalKey(){
 	$(".key").clone().appendTo("#board").removeClass("key").addClass("clickKey");
 	$(".clickKey").click(function(){
+		skey.play();
 		clearTimeout(uncount);
 		sessionStorage.setItem("seudides","0");
 		$("body").removeClass().addClass("win");
@@ -200,6 +215,7 @@ function initClickFinalKey(){
 function initClickOnFlash(){
 	$(".flash").clone().appendTo("#board").removeClass("flash").addClass("clickFlash");
 	$(".clickFlash").click(function(){
+		sflash.play();
 		valId = $(this).attr("data-rel");
 		onFlash();
 		$(".flash[data-rel="+valId+"], .clickFlash[data-rel="+valId+"]").remove();
@@ -223,6 +239,7 @@ function initSkullHover(){
 }
 
 function endGame(why){
+	sskull.play();
 	defaultSong.pause();
 	defaultSong.currentTime = 0;
 	sessionStorage.setItem("seudides","0");
@@ -279,9 +296,6 @@ function generateLvl0(){
 	
 	initClickOnKey();
 	//Initialise le compteur si user vient du dernier niveau
-
-	song1.volume = 0.5;
-	song2.volume = 0.5;
 
 }
 
@@ -462,3 +476,4 @@ function generateLvl5(){
 	initLastMusic();
 
 }
+
