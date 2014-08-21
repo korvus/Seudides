@@ -36,9 +36,12 @@ $(document).ready(function(){
 
 //////////////////////////////////////////////////////////////////////////////////FUNCTIONS
 function initLight(){
-    $(document).mousemove(function(e){
-        light.offset({top:e.pageY-widthLight,left:e.pageX-heightLight});
-    })
+	$(document).mousemove(function(e){
+		light.css({
+			"top": e.pageY-widthLight + 'px',
+			"left": e.pageX-heightLight + 'px'
+		});
+	});
 }
 
 function ListenResize(){
@@ -135,9 +138,10 @@ function getLvl(lvl){
 
 function initNextLvl(lvl){
 	$("#victory div span").click(function(e){
-		$("body").removeClass("lvl"+(parseInt(lvl)-1)).addClass("lvl"+lvl);
+		$("body").removeClass("lvl"+(parseInt(lvl,10)-1)).addClass("lvl"+lvl);
 		$("body").removeClass().addClass("ingame");
 		$("#board").html("");
+		console.log(light);
 		light.offset({top:e.pageY-widthLight,left:e.pageX-heightLight});
 		getLvl(lvl);
 	})

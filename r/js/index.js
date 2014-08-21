@@ -56,6 +56,8 @@ $(document).ready(function(){
 	}
 
 	$(window).resize(function(){
+		wboard = $(window).width();
+		hboard = $(window).height();
 		if(wboard>1000 && hboard>800){
 			$("body").addClass("good").removeClass("bad");
 		}else{

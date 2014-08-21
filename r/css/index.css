@@ -1,5 +1,5 @@
 body{background:#000;color:#fff;font-size:25px;font-weight:bold;}
-p{width:300px;margin:50px auto 50px auto;animation:apparition 2s ease none;}
+p{width:400px;margin:50px auto 50px auto;animation:apparition 2s ease none;}
 .small{font-size:14px;font-weight:normal;}
 
 @keyframes apparition{
@@ -7,9 +7,10 @@ p{width:300px;margin:50px auto 50px auto;animation:apparition 2s ease none;}
   100%{color:#fff;}
 }
 
-h1{font-size:25px;width:300px;margin:0 auto;text-shadow:0 0 10px #fff;text-align:center;}
-.bt{display:none;text-transform:uppercase;border:1px solid #fff;color:#fff;width:150px;margin:0 auto;font-size:25px;padding:10px;text-align:center;text-decoration:none;}
+h1{font-size:25px;width:400px;margin:0 auto;text-shadow:0 0 10px #fff;}
+.bt{display:none;text-transform:uppercase;border:1px solid #fff;color:#fff;width:400px;margin:0 auto;font-size:25px;padding:10px;text-align:center;text-decoration:none;}
 #warning{display:none;color:#fff;font-size:14px;width:300px;margin:0 auto;}
+.keys{display:inline-block;width:114px;height:23px;background:url(i/sprite.png) no-repeat 0 0;}
 
 #warning p{display:block;}
 #warning table{width:300px;margin:25px 0 0 0;font-size:12px;font-weight:normal;}
