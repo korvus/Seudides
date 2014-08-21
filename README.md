@@ -5,7 +5,7 @@ Seudides
 ------------------------------
 * [Play online!](http://paul.emik.free.fr/seudides)
 
-###What happend in the web ?
+###What happen to the web ?
 
 The wizard Darshado stools colors.   
 You the light.   
