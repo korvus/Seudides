@@ -16,18 +16,18 @@
 	<h1>Seudides [sədides]</h1>
 
 	<p>
-		The wizard Darshado stools colors.<br />
-		You the light.<br />
+		The wizard Darshado stool colors.<br />
+		You are the light.<br />
 		You have to find the keys, for getting the outcome...<br />
 		Better if you're not daltonian for playing this game!<br />
 	</p>
 
 	<p class="small">
-		For playing in optimum conditions, play on <strong>firefox</strong>.
+		To play in optimum conditions, play on <strong>Firefox</strong>.
 	</p>
 
 	<div id="warning">
-		<p>for playing Seudides, your windows need to be at least 1000px width and 800px height. If your screen is under that, you will not be abble to save the world :(</p>
+		<p>for playing Seudides, your window need to be at least 1000px width and 800px height. If your screen is under that, you will not be abble to save the world :(</p>
 		<table>
 			<thead>
 				<tr>
@@ -43,7 +43,7 @@
 					<td>800px</td>
 				</tr>
 				<tr>
-					<td>Actually</td>
+					<td>Currently</td>
 					<td id="rszW"></td>
 					<td id="rszH"></td>
 				</tr>
